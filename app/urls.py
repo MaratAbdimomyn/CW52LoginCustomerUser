@@ -4,6 +4,7 @@ from .views import *
 
 router = DefaultRouter()
 router.register('home', Customers)
+router.register('course', Courses)
 
 
 urlpatterns = [

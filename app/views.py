@@ -43,3 +43,8 @@ class LogoutView(APIView):
     def get(self, request):
         logout(request)
         return Response(status=status.HTTP_200_OK)
+
+class Courses(ModelViewSet):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
+    permission_classes = [IsAuthenticated]
